@@ -45,7 +45,10 @@
     ></script>
 
     <script>
-      const socket = io("http://localhost:8081");
+      const socket = io("https://spontaneous-truffle-fac969.netlify.app/", {
+        path: "/.netlify/functions/index/socket.io",
+        transports: ["polling"],
+      });
 
       socket.on("connect", () => {
         console.log("conectado");
