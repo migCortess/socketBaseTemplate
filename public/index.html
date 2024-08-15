@@ -45,10 +45,7 @@
     ></script>
 
     <script>
-      const socket = io("https://spontaneous-truffle-fac969.netlify.app/", {
-        path: "/.netlify/functions/index/socket.io",
-        transports: ["polling"],
-      });
+      const socket = io("https://sockettest-9d26ffa6aea5.herokuapp.com/");
 
       socket.on("connect", () => {
         console.log("conectado");
