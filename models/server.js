@@ -39,9 +39,10 @@ class Server {
         //config sockets
         this.socketsConfig();
 
-        this.server.listen(this.port, () => {
-            console.log(`server is running on port: ${this.port}`);
-        });
+        serverless(this.server);
+        // this.server.listen(this.port, () => {
+        //     console.log(`server is running on port: ${this.port}`);
+        // });
     }
 }
 
