@@ -5,19 +5,13 @@ const socketio =    require('socket.io');
 const path     =    require('path');
 const cors     =    require('cors');
 const Sockets  =    require('./sockets');
-//const serverless = require('serverless-http');
 
 class Server {
     constructor () {
         this.app = express();
-        //this.port = process.env.PORT;
-        //this.router = express.Router();
-        //http server
+        this.port = process.env.PORT;
         this.server = http.createServer(this.app);
 
-        // this.serverless = serverless();
-
-        //config socket server
         this.io = socketio(this.server)
 
     }
@@ -28,8 +22,6 @@ class Server {
 
     //CORS
     this.app.use(cors());
-
-    // this.app.use('/.netlify/functions/index',this.router);
 
     }
 
