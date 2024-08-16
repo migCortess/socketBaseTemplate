@@ -17,7 +17,7 @@ class Sockets {
 
             socket.on("close-chat",({isClose}) => {
                 console.log(isClose)
-                this.io.emit('close-chat',{isClose, serverMessage: '[END_CONVERSATION]'})
+                this.io.emit('close-chat',{isClose:isClose, serverMessage: '[END_CONVERSATION]'})
             })
         });
         
