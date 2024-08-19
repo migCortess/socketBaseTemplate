@@ -19,6 +19,11 @@ class Sockets {
                 console.log(isClose)
                 this.io.emit('close-chat',{isClose, serverMessage: '[END_CONVERSATION]'})
             })
+
+            socket.on("typing",(userTyping) => {
+                console.log(userTyping)
+                this.io.emit('typing', userTyping)
+            })
         });
         
     }
