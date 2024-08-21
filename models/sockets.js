@@ -24,6 +24,11 @@ class Sockets {
                 console.log(userTyping)
                 this.io.emit('typing', userTyping)
             })
+
+            socket.on("ranking",(ranking) => {
+                console.log(ranking)
+                this.io.emit('ranking', ranking)
+            })
         });
         
     }
